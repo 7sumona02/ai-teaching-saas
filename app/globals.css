@@ -120,3 +120,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.container {
+  @apply mx-auto max-w-6xl py-5 px-6 md:px-12;
+}
+
+.title {
+  @apply text-xl font-semibold;
+}
