@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/table"
 import { Badge } from './ui/badge'
 import { Button } from './ui/button'
+import Link from 'next/link'
 
 const CTA = () => {
   return (
@@ -123,7 +124,7 @@ const CTA = () => {
                     src='/assets/ctaimg.svg'
                     className='w-60' />
                 </div>
-                <div><Button className='bg-orange-300 text-black w-full px-18'>Build New Companion</Button></div>
+                <Link href='companions/new'><Button className='bg-orange-300 text-black w-full px-18'>Build New Companion</Button></Link>
             </div>
         </div>
     </div>
