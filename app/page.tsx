@@ -17,7 +17,7 @@ const page = () => {
     {
       id: 1,
       name: "Math Genius",
-      subject: "maths",
+      subject: "math",
       topic: "Algebra Fundamentals",
       duration: 1800,
       style: "Interactive"
