@@ -28,7 +28,7 @@ const page = () => {
           backgroundColor='bg-lime-300'
         />
       </div>
-      <div>
+      <div className='pb-10'>
         <CTA />
       </div>
     </div>
