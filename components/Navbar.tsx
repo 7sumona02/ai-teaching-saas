@@ -5,6 +5,14 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Logo } from './logo'
+import {
+    SignInButton,
+    SignOutButton,
+    SignUpButton,
+    SignedIn,
+    SignedOut,
+    UserButton,
+  } from '@clerk/nextjs'
 
 const menuItems = [
     { name: 'Home', href: '#link' },
@@ -63,7 +71,7 @@ export const Navbar = () => {
                         </div>
 
                         <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-                            <div className="lg:hidden">
+                            <div className="lg:hidden space-y-6">
                                 <ul className="space-y-6 text-base">
                                     {menuItems.map((item, index) => (
                                         <li key={index}>
@@ -76,13 +84,13 @@ export const Navbar = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+                            {/* <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <Button
                                     asChild
                                     variant="outline"
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
+                                    <Link href="/sign-in">
                                         <span>Login</span>
                                     </Link>
                                 </Button>
@@ -102,7 +110,17 @@ export const Navbar = () => {
                                         <span>Get Started</span>
                                     </Link>
                                 </Button>
-                            </div>
+                            </div> */}
+                            <header className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+                                <SignedOut>
+                                    <SignInButton><Button size={"sm"} variant={"outline"}>Sign in</Button></SignInButton>
+                                    <SignUpButton><Button size={"sm"}>Sign up</Button></SignUpButton>
+                                </SignedOut>
+                                <SignedIn>
+                                    <UserButton />
+                                    <SignOutButton><Button size={"sm"}>Sign out</Button></SignOutButton>
+                                </SignedIn>
+                            </header>
                         </div>
                     </div>
                 </div>
