@@ -13,17 +13,17 @@ export const subjects = [
   ];
   
   export const subjectsColors = {
-    math: "#FFDA6E",       // Bright yellow (for calculations)
-    science: "#E5D0FF",    // Light purple (general science)
-    history: "#FFECC8",    // Warm cream (vintage feel)
-    english: "#BDE7FF",    // Soft blue (communication)
-    programming: "#FFC8E4",// Pink (tech/innovation)
-    art: "#FFB5B5",        // Coral red (creativity)
-    music: "#C8E7FF",      // Cool blue (harmony)
-    geography: "#C8FFD4",  // Mint green (nature)
-    physics: "#D4C8FF",    // Lavender (cosmic)
-    chemistry: "#FFDAC8",  // Peach (reactions)
-    biology: "#C8FFEC"     
+    math: "#fde68a",       // Bright yellow (for calculations)
+    science: "#fed7aa",    // Light purple (general science)
+    history: "#d9f99d",    // Warm cream (vintage feel)
+    english: "#fef08a",    // Soft blue (communication)
+    programming: "#a5f3fc",// Pink (tech/innovation)
+    art: "#bae6fd",        // Coral red (creativity)
+    music: "#c7d2fe",      // Cool blue (harmony)
+    geography: "#fbcfe8",  // Mint green (nature)
+    physics: "#fecdd3",    // Lavender (cosmic)
+    chemistry: "#99f6e4",  // Peach (reactions)
+    biology: "#bbf7d0"     
   };
   
   export const voices = {
