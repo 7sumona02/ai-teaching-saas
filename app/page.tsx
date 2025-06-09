@@ -24,16 +24,16 @@ const page = () => {
     },
     {
       id: 2,
-      name: "Math Genius",
-      subject: "Mathematics",
+      name: "Physics Genius",
+      subject: "Physics",
       topic: "Algebra Fundamentals",
       duration: 1800,
       style: "Interactive"
     },
     {
       id: 3,
-      name: "Math Genius",
-      subject: "Mathematics",
+      name: "History Genius",
+      subject: "History",
       topic: "Algebra Fundamentals",
       duration: 1800,
       style: "Interactive"
