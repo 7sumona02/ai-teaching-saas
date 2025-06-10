@@ -17,8 +17,8 @@ const CompanionsLibrary = async ({searchParams}: SearchParams) => {
   return (
     <div className='container'>
       <div className='flex md:flex-row flex-col justify-between items-center space-y-4'>
-        <div><h1 className='text-xl font-semibold pt-6'>Companions Library</h1></div>
-        <div className='flex md:flex-row flex-col items-center gap-4 w-full'>
+        <h1 className='text-xl font-semibold pt-6'>Companions Library</h1>
+        <div className='flex justify-end md:flex-row flex-col gap-4 w-full'>
             <SearchInput />
             <SubjectFilter />
         </div>

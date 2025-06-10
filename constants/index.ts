@@ -13,16 +13,16 @@ export const subjects = [
   ];
   
   export const subjectsColors = {
-    math: "#fde68a",       // Bright yellow (for calculations)
-    science: "#fed7aa",    // Light purple (general science)
-    history: "#d9f99d",    // Warm cream (vintage feel)
-    english: "#fef08a",    // Soft blue (communication)
-    programming: "#a5f3fc",// Pink (tech/innovation)
-    art: "#bae6fd",        // Coral red (creativity)
-    music: "#c7d2fe",      // Cool blue (harmony)
-    geography: "#fbcfe8",  // Mint green (nature)
-    physics: "#fecdd3",    // Lavender (cosmic)
-    chemistry: "#99f6e4",  // Peach (reactions)
+    math: "#fde68a",       
+    science: "#fed7aa",    
+    history: "#d9f99d",   
+    english: "#fef08a",   
+    programming: "#a5f3fc",
+    art: "#bae6fd",       
+    music: "#c7d2fe",      
+    geography: "#fbcfe8", 
+    physics: "#fecdd3",   
+    chemistry: "#99f6e4",
     biology: "#bbf7d0"     
   };
   

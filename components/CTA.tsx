@@ -83,6 +83,7 @@ const CTA = () => {
                                                 name={lesson.name}
                                                 topic={lesson.topic}
                                                 color={getSubjectColor(lesson.subject)}
+                                                subject={lesson.subject}
                                             />
                                         </TableCell>
                                         <TableCell>
