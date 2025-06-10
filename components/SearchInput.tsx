@@ -9,12 +9,11 @@ const SearchInput = () => {
     const pathname = usePathname()
     const router = useRouter()
     const searchParams = useSearchParams()
-    const query = searchParams.get('topic') || '';
-
+    // const query = searchParams.get('topic') || '';
     const [searchQuery, setSearchQuery] = useState("")
 
     useEffect(() => {
-        const delayDounceFn = setTimeout(() => {
+        const delayDebounceFn = setTimeout(() => {
          if(searchQuery) {
             const newUrl = formUrlQuery({
                 params: searchParams.toString(),
@@ -35,6 +34,7 @@ const SearchInput = () => {
         }   
         },500)
         
+        return () => clearTimeout(delayDebounceFn) // Cleanup the timeout
     },[searchQuery,router,pathname,searchParams])
 
   return (

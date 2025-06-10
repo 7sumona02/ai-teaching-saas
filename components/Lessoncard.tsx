@@ -1,4 +1,3 @@
-import { TestTube } from 'lucide-react'
 import React from 'react'
 
 interface LessoncardProps {
