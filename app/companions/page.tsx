@@ -1,4 +1,6 @@
 import CompanionCard from '@/components/CompanionCard'
+import SearchInput from '@/components/SearchInput'
+import SubjectFilter from '@/components/SubjectFilter'
 import { getAllCompanions } from '@/lib/actions/companion.actions'
 import { getSubjectColor } from '@/lib/utils'
 import React from 'react'
@@ -14,7 +16,13 @@ const CompanionsLibrary = async ({searchParams}: SearchParams) => {
     
   return (
     <div className='container'>
-      <h1 className='text-xl font-semibold pt-6'>Companions Library</h1>
+      <div className='flex md:flex-row flex-col justify-between items-center space-y-4'>
+        <div><h1 className='text-xl font-semibold pt-6'>Companions Library</h1></div>
+        <div className='flex md:flex-row flex-col items-center gap-4 w-full'>
+            <SearchInput />
+            <SubjectFilter />
+        </div>
+      </div>
       <div className='pt-6 grid md:grid-cols-3 grid-cols-1 gap-6'>
       {companions.map((companion) => (
                     <CompanionCard 
