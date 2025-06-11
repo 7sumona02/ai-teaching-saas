@@ -10,7 +10,7 @@ import {
     AvatarImage,
   } from "@/components/ui/avatar"
 import { Button } from './ui/button'
-import { Mic, Repeat } from 'lucide-react'
+import { Mic } from 'lucide-react'
 import { ScrollArea } from './ui/scroll-area'
 
 export enum CallStatus {
@@ -38,12 +38,12 @@ interface SavedMessage {
   }
 
 const CompanionComponent = ({
-  companionId, 
+//   companionId, 
   subject, 
   topic, 
   name, 
   userName, 
-  userImage, 
+//   userImage, 
   style, 
   voice,
   color
@@ -114,7 +114,7 @@ const CompanionComponent = ({
         clientMessages: ['transcript'],
         serverMessages: []
     }
-    // @ts-expect-error
+    // @ts-expect-error - Vapi's start method expects different parameters than what we're passing
     vapi.start(configureAssistant(voice,style),assistantOverrides)
   }
 
