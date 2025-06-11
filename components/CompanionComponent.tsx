@@ -125,11 +125,11 @@ const CompanionComponent = ({
   
   return (
    <div className='w-full flex md:flex-row flex-col gap-6'>
-    <div className='md:w-2/3 border border-black h-[50vh] rounded-lg flex flex-col items-center justify-center mt-10 p-6'>
+    <div className='relative md:w-2/3 border border-black h-[50vh] rounded-lg flex flex-col items-center justify-center mt-10 p-6'>
         <div className={cn('p-6 rounded-lg flex items-center justify-center', callStatus===CallStatus.FINISHED || CallStatus.INACTIVE ? 'opacity-100' : 'opacity-0', callStatus===CallStatus.CONNECTING && 'opacity-100 animate-pulse')} style={{backgroundColor: color}}>
             <img src={`/icons/${subject}.svg`} className='w-14' alt='subject-icon' />
         </div>
-        <div className={cn('absolute transition-opacity duration-1000', callStatus===CallStatus.ACTIVE ? 'opacity-100' : 'opacity-0')}>
+        <div className={cn('absolute top-4 right-4 transition-opacity duration-1000', callStatus===CallStatus.ACTIVE ? 'opacity-100' : 'opacity-0')}>
             <Lottie
             lottieRef={lottieRef}
             animationData={soundwaves}
@@ -142,7 +142,7 @@ const CompanionComponent = ({
             {messages.map((message) => {
                 if(message.role === 'assistant') {
                     return (
-                        <p key={message.content} className=''>
+                        <p key={message.content} className='font-medium text-sm text-neutral-600'>
                             {name
                             .split(' ')[0]
                             .replace('/[.,]/g, ','')
