@@ -16,7 +16,7 @@ import {
 
 const menuItems = [
     { name: 'Home', href: '#link' },
-    { name: 'Learning Companions', href: '#link' },
+    { name: 'Learning Companions', href: '/companions' },
     { name: 'My Journey', href: '#link' }
 ]
 
