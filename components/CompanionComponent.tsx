@@ -125,7 +125,7 @@ const CompanionComponent = ({
   
   return (
    <div className='w-full flex md:flex-row flex-col gap-6'>
-    <div className='relative md:w-2/3 border border-black h-[50vh] rounded-lg flex flex-col items-center justify-center mt-10 p-6'>
+    <div className='relative md:w-2/3 border border-black h-full rounded-lg flex flex-col items-center justify-center mt-10 p-6'>
         <div className={cn('p-6 rounded-lg flex items-center justify-center', callStatus===CallStatus.FINISHED || CallStatus.INACTIVE ? 'opacity-100' : 'opacity-0', callStatus===CallStatus.CONNECTING && 'opacity-100 animate-pulse')} style={{backgroundColor: color}}>
             <img src={`/icons/${subject}.svg`} className='w-14' alt='subject-icon' />
         </div>
@@ -156,7 +156,7 @@ const CompanionComponent = ({
                 }
             })}
         </ScrollArea>
-        <div className='transcript-fade'>messages</div>
+        {/* <div className='transcript-fade'>messages</div> */}
     </div>
     <div className='md:w-1/3'>
         <div className='border border-black p-6 py-10 rounded-lg md:mt-10 mt-6 flex flex-col justify-center items-center'>
