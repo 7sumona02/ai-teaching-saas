@@ -139,10 +139,10 @@ const CompanionComponent = ({
         </div>
         <p className='text-xl font-semibold py-2'>{name}</p>
         <ScrollArea className='transcript w-full h-44'>
-            {messages.map((message) => {
+            {messages.map((message, index) => {
                 if(message.role === 'assistant') {
                     return (
-                        <p key={message.content} className='font-medium text-sm text-neutral-600'>
+                        <p key={index} className='font-medium text-sm text-neutral-600'>
                             {name
                             .split(' ')[0]
                             .replace('/[.,]/g, ','')
@@ -150,7 +150,7 @@ const CompanionComponent = ({
                         </p>
                     )
                 } else {
-                    <p key={message.content}>
+                    <p key={index}>
                         {userName}: {message.content}
                     </p>
                 }
@@ -168,7 +168,7 @@ const CompanionComponent = ({
         </div>
         <div className='flex gap-4 w-full'>
             <div className='w-1/2 border border-black p-4 flex flex-col items-center justify-center mt-6 rounded-lg gap-2'>
-                <Button variant={"ghost"} onClick={toggleMicrophone}>
+                <Button variant={"ghost"} onClick={toggleMicrophone} disabled={callStatus !== CallStatus.ACTIVE}>
                     <Mic />
                 </Button>
                 <p>{isMuted ? 'Turn on' : 'Turn off'}</p>
